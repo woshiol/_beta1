@@ -1,0 +1,19 @@
+[26-Dec-2014 16:48:04 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 23
+[26-Dec-2014 16:48:04 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 25
+[26-Dec-2014 16:48:04 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 26
+[26-Dec-2014 16:54:33 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 22
+[26-Dec-2014 16:54:33 UTC] PHP Notice:  Undefined variable: y in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 27
+[26-Dec-2014 16:54:33 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 27
+[26-Dec-2014 16:54:33 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 28
+[26-Dec-2014 16:57:59 UTC] PHP Notice:  Undefined variable: scale_ratio in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 5
+[26-Dec-2014 16:57:59 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 18
+[26-Dec-2014 16:57:59 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 20
+[26-Dec-2014 16:57:59 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 21
+[26-Dec-2014 16:58:21 UTC] PHP Notice:  Undefined variable: scale_ratio in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 5
+[26-Dec-2014 16:58:21 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 18
+[26-Dec-2014 16:58:21 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 20
+[26-Dec-2014 16:58:21 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 21
+[26-Dec-2014 16:58:31 UTC] PHP Notice:  Undefined variable: scale_ratio in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 5
+[26-Dec-2014 16:58:31 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 18
+[26-Dec-2014 16:58:31 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 20
+[26-Dec-2014 16:58:31 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/songkeyu/public_html/_beta1/php_includes/image_resize.php on line 21

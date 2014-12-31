@@ -1,0 +1,81 @@
+INSTRUCTION: 
+1. the _header.php is going to connect to the database and retrieve all data needed from the users table. Just use php to refer it on any page.
+
+
+
+
+Menu
+	Home 		(intro)
+	About		(intro)
+	Club		(intro)
+	Prime		(intro)
+	Homestay	(intro)
+
+https://p3plcpnl0370.prod.phx3.secureserver.net:2083/logout/?locale=en&plid=GoDaddy
+
+Account System
+
+	Basic Account Info
+		Overview
+			Travel Data
+				Miles
+				World
+				Cities
+				Countries
+				Trips
+			Map of Current Location
+				Check In
+		
+		Settings
+			Login Information
+				Email			+change email
+				Password 		+change password
+			Basic Information
+				Preferred Name
+				First Name
+				Last Name
+				Country of Origin
+				Country of Study/Work
+		
+		Wishlist
+			...
+		
+		Booking History
+			...
+				
+		Finance
+			Method of Payment
+			Method of Reimbursement
+			
+			
+	**************** (conditional: mentor) ****************
+	
+		Public Profile
+			Bio
+			Ratings, Overall 							- not modifiable
+	
+		(Individual) Class Type Postings - Odyssey Prime								-Manan
+			Class Title
+			Class Introduction
+			Photo/Flyer
+			Price
+			Availability
+			Class Size
+			Ratings & Reviews				- not modifieable
+			
+	
+	**************** (conditional: CP) ****************
+		
+		Posting - Odyssey Club
+		Posting - Odyssey Prime (of all mentors in THIS CHAPTER)
+		
+		
+		
+		
+		1)coaches login and registration
+		2)search function for coaching sessions
+		3)payment system
+		4)rating system
+		
+		
+		
