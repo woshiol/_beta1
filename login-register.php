@@ -90,6 +90,13 @@ if(isset($_POST["u"])){
 	$p = $_POST['p'];
 	$g = preg_replace('#[^a-z]#', '', $_POST['g']);
 	$c = preg_replace('#[^a-z ]#i', '', $_POST['c']);
+	$l = 1;
+	if (isset($_POST['signupbtn2'])){
+		$l= 2;
+	}
+	else if(isset($_POST['signupbtn2'])){
+		$l= 3;
+	}
 	// GET USER IP ADDRESS
     $ip = preg_replace('#[^0-9.]#', '', getenv('REMOTE_ADDR'));
 	// DUPLICATE DATA CHECKS FOR USERNAME AND EMAIL
@@ -122,8 +129,8 @@ if(isset($_POST["u"])){
 		// Hash the password and apply your own mysterious unique salt
         $p_hash = md5($p);
 		// Add user info into the database table for the main site table
-		$sql = "INSERT INTO users (username, email, password, ip, signup, lastlogin, notescheck)       
-		        VALUES('$u','$e','$p_hash','$ip',now(),now(),now())";
+		$sql = "INSERT INTO users (username, email, password, ip, signup, lastlogin, notescheck, User level)       
+		        VALUES('$u','$e','$p_hash','$ip',now(),now(),now(), '$l')";
 		$query = mysqli_query($db_conx, $sql); 
 		$uid = mysqli_insert_id($db_conx);
 		// Establish their row in the useroptions table
@@ -281,33 +288,74 @@ function checkemail(){
 	}
 }
 
-function signup(){
+
+
+
+
+
+
+function signup(){ //1
 	var u = _("username").value;
 	var e = _("email").value;
 	var p1 = _("pass1").value;
 	var p2 = _("pass2").value;
 	var status = _("status");
-	if(u == "" || e == "" || p1 == "" || p2 == ""){
+	if(u == "" || e == "" || p1 == "" || p2 == ""){  //2
 		status.innerHTML = "Please fill out all fields :)";
-	} else if(p1 != p2){
+	} //1 close
+	else if(p1 != p2){ //3 
 		status.innerHTML = "Your password fields do not match :(";
-	} else {
+	} // 2 close 
+	else { // 4
 		_("signupbtn").style.display = "none";
 		status.innerHTML = 'please wait ...';
 		var ajax = ajaxObj("POST", "login-register.php");
-        ajax.onreadystatechange = function() {
-	        if(ajaxReturn(ajax) == true) {
-	            if(ajax.responseText != "signup_success"){
+        ajax.onreadystatechange = function() { //5
+	        if(ajaxReturn(ajax) == true) { //6
+	            if(ajax.responseText != "signup_success"){  //7
 					status.innerHTML = ajax.responseText;
 					_("signupbtn").style.display = "block";
-				} else {
+				} //3 close
+				else { //8
 					window.scrollTo(0,0);
 					_("signupform").innerHTML = "OK "+u+", check your email inbox and junk mail box at <u>"+e+"</u> in a moment to complete the sign up process by activating your account. You will not be able to do anything on the site until you successfully activate your account.";
-				}
-	        }
-        }
+				} //4 close
+	        } //5 close
+        } //6 close
         ajax.send("u="+u+"&e="+e+"&p="+p1);
-	}
+	} 
+}
+
+function signup2(){ //1
+	var u = _("username").value;
+	var e = _("email").value;
+	var p1 = _("pass1").value;
+	var p2 = _("pass2").value;
+	var status = _("status");
+	if(u == "" || e == "" || p1 == "" || p2 == ""){  //2
+		status.innerHTML = "Please fill out all fields :)";
+	} //1 close
+	else if(p1 != p2){ //3 
+		status.innerHTML = "Your password fields do not match :(";
+	} // 2 close 
+	else { // 4
+		_("signupbtn").style.display = "none";
+		status.innerHTML = 'please wait ...';
+		var ajax = ajaxObj("POST", "login-register.php");
+        ajax.onreadystatechange = function() { //5
+	        if(ajaxReturn(ajax) == true) { //6
+	            if(ajax.responseText != "signup_success"){  //7
+					status.innerHTML = ajax.responseText;
+					_("signupbtn").style.display = "block";
+				} //3 close
+				else { //8
+					window.scrollTo(0,0);
+					_("signupform").innerHTML = "OK "+u+", check your email inbox and junk mail box at <u>"+e+"</u> in a moment to complete the sign up process by activating your account. You will not be able to do anything on the site until you successfully activate your account.";
+				} //4 close
+	        } //5 close
+        } //6 close
+        ajax.send("u="+u+"&e="+e+"&p="+p1);
+	} 
 }
 
 function login(){
@@ -429,7 +477,10 @@ window.onload = addEvents; */
                                         </div>
 						
                                             
-                                        <input id="signupbtn" onclick="signup()" class="btn btn-primary" type="submit" value="Sign up for OdysseyLife" />
+                                        <input id="signupbtn" onclick="signup()" class="btn btn-primary" type="submit" value="Sign up for OdysseyLife" /> <br/>
+                                        <input id="signupbtn2" onclick="signup2()" class="btn btn-primary" type="submit" value="Sign up as Captain for OdysseyLife" /><br/>
+                                        <input id="signupbtn3" onclick="signup3()" class="btn btn-primary" type="submit" value="Sign up as Chapter President for OdysseyLife" />
+
                                         <span id="status"></span>
                                     </form>
                                 </div>
